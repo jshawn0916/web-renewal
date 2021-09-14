@@ -1,0 +1,63 @@
+/* common */
+.total-wrap{
+    display: flex;
+}
+/* header */
+.header{
+    width: 320px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 0 30px;
+    position: fixed;
+}
+.header .logo{
+    width: 110px;
+    height: 110px;
+}
+.header .menu-left-box{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu-left-box .menu-left li{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+.menu-left-box .menu-left li.on{
+    color: #007042;
+}
+.menu-left-box .menu-left li + li{
+    margin-top: 10px;
+}
+.menu-left-box .menu-left li span + span{
+    margin-left: 16px;
+}
+.header .copyright{
+    position: absolute;
+    bottom: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+/* body-box */
+.content-outter-fixed{
+    width: calc(100% - 320px);
+    height: 100vh;
+    right: 0;
+    position: fixed;
+    display: flex;
+}
+.content-outter-fixed .middle-box{
+    width:560px;
+    height: 100vh;
+}
+.content-outter-fixed .right-box{
+    width: calc(100% - 560px);
+    height: 100vh;
+    background-color: sandybrown;
+}
+/* right-menu */
+.right-box .menu-right-box{
+    width: 100;
+}
