@@ -5,6 +5,24 @@
 .fixed{
     position: fixed;
 }
+.none{
+    display: none;
+}
+.seoul-txt{
+    color: #010e74;
+}
+.incheon-txt{
+    color: #0d2537;
+}
+.gyeongju-txt{
+    color:  #43163e;
+}
+.busan-txt{
+    color:  #1f3561;
+}
+.jeju-txt{
+    color: #134721;
+}
 /* header */
 .header{
     width: 320px;
@@ -26,6 +44,7 @@
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.125rem;
     font-weight: bold;
+    cursor: pointer;
 }
 .menu-left-box .menu-left li.on{
     color: #007042;
@@ -122,10 +141,12 @@
 }
 .content-box .right-box .content-txt .content-sub{
     font-size:  1.125rem;
+    line-height: 1.5;
 }
 .content-box .right-box .product-txt{
     font-size: 1.125rem;
     text-align: right;
     padding: 0 70px;
     margin-top: 330px;
+    font-family: 'Titillium Web', sans-serif;
 }
