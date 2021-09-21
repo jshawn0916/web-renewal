@@ -1,10 +1,10 @@
 
 document.querySelectorAll('.city-btn').forEach(function(anchor){
     anchor.onclick = function(e){
-        // console.log(this.getAttribute('class'))
-        // this.getAttribute('class').toggle('.on')
-        anchor.classList.remove('on');
-        console.log(anchor.classList)
+        document.querySelectorAll('.city-btn').forEach(function(ele){
+            ele.classList.remove('on');
+        })
+        anchor.classList.add('on');
         e.preventDefault()
         const name = anchor.getAttribute('name')
         const target = document.getElementById(name)
@@ -15,6 +15,7 @@ document.querySelectorAll('.city-btn').forEach(function(anchor){
 
 const scrollTo = function(element, to, duration){
     let start = element.offsetTop
+    // console.log(element)
     let change = to - start
     let currentTime = 0
     let increment = 20;
@@ -30,7 +31,10 @@ const scrollTo = function(element, to, duration){
 
     animateScroll()
 }
-
+//t = current time
+//b = start value
+//c = change in value
+//d = duration
 const easeInOutQuad = (t, b, c, d) => {
     t /= d / 2
     if (t < 1) return c / 2 * t * t + b
