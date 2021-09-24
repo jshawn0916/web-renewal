@@ -1,4 +1,8 @@
 /*common */
+.align-wrap{
+    width: 1280px;
+    margin: 0 auto;
+}
 .none{
     display: none;
 }
@@ -25,6 +29,27 @@
 }
 .left{
     text-align: left;
+}
+.top-btn{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #212932;
+    cursor: pointer;
+    display: none;
+}
+.top-btn.on{
+    display: block;
+}
+.top-btn .arrow-box{
+    background:url('../../img/arrow.png') no-repeat 0 0;
+    background-size: contain;
+    width: 12px;
+    height: 7px;
+    margin: 21px auto;
 }
 /* header */
 .header{
@@ -55,9 +80,52 @@
 .header-align .right-menubox .menu-btn + .menu-btn{
     margin-left: 20px;
 }
-.align-wrap{
-    width: 1280px;
-    margin: 0 auto;
+.header-align .right-menubox .menu-btn.ham-btn{
+    width: 34px;
+}
+/* header-menu-trigger */
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #444;
+    border-radius: 4px;
+    transition: transform .5s ease;
+}
+.menu-trigger .line-1 {
+    top: 0;
+}
+.menu-trigger .line-2 {
+    top: 13px;
+}
+
+.menu-trigger .line-3 {
+    bottom: 0;
+}
+.toggle-active .line-1 {
+    transform: rotate(-45deg);
+    top: 50%;
+}   
+.toggle-active .line-2 {
+    opacity: 0;
+}
+.toggle-active .line-3 {
+    transform: rotate(45deg);
+    top: 50%;
 }
 /* showroom-section */
 
@@ -96,6 +164,62 @@
 .show-room-section .contents-outter .contents-double .contents-single + .contents-single{
     margin-left: 30px;
 }
+.show-room-section .show-room-txtbox{
+    position: absolute;
+    color: #fff;
+}
+.show-room-section .show-room-txtbox .show-room-sub{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-family: 'noto-light';
+}
+.show-room-section .show-room-txtbox .show-room-title{
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+.show-room-section .show-room-txtbox.bedroom{
+    width: 100%;
+    padding: 80px 50px;
+    top: 0;
+    left: 0;
+}
+.show-room-section .show-room-txtbox.bedroom .show-room-title{
+    padding-bottom: 20px;
+    border-bottom: 2px solid #fff;
+}
+.show-room-section .show-room-txtbox.livingroom{
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: 40px 50px;
+}
+.show-room-section .show-room-txtbox.livingroom .show-room-title{
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-bottom: 2px solid #fff;
+}
+.show-room-section .show-room-txtbox.single{
+    top: 0;
+    right: 0;
+    padding: 30px 40px;
+    background-color: rgba(0, 0, 0, .4);
+    text-align: right;
+}
+.show-room-section .show-room-txtbox.single .show-room-sub{
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-bottom: 2px solid #fff;
+}
+.moveup{
+    position: relative;
+    /* transition: all 2s; */
+}
+.moveup:hover{
+    top: -20px;
+}
+
 /* material-section */
 .material-section{
     padding: 100px 0;
@@ -142,6 +266,38 @@
 .material-section .contents-box .content-material.single:last-child{
     margin-top: 30px;
 } 
+.material-section .content-material{
+    position: relative;
+    cursor: pointer;
+}
+.material-section .content-material:hover .material-txtbox{
+    display: block;
+}
+.material-section .content-material .material-txtbox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    text-align: right;
+    padding: 50px;
+    display: none;
+    transition: all 1s ease-in;
+}
+.material-section .content-material .material-txtbox .material-title{
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.material-section .content-material .material-txtbox .material-sub{
+    font-size: 1.375rem;
+}
+
+
+
+
+
 /* information-section */
 .information-section .contents-info-outter{
     display: flex;
@@ -173,6 +329,10 @@
     color: #4F6357;
     border-radius: 25px;
 }
+.information-section .info-txtbox .info.more-btn:hover{
+    background-color: #4F6357;
+    color: #fff;
+}
 /* ikea-lab-section */
 .ikea-lab-section{
     padding: 100px 0;
@@ -189,6 +349,12 @@
 }
 .ikea-lab-section .lab-videobox{
     width: 60%;
+}
+.ikea-lab-section .lab-videobox iframe{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
 }
 .ikea-lab-section .lab-txtbox{
     width: 35%;
@@ -221,6 +387,10 @@
     color: #222B26;
     border-radius: 25px;
 }
+.ikea-lab-section .lab-txtbox .lab.more-btn:hover{
+    background-color: #222B26;
+    color: #F8F0E0;
+}
 /* furnishing-section */
 .furnishing-section .contents-outter{
     display: flex;
@@ -228,6 +398,22 @@
 }
 .furnishing-section .contents-outter .contents-box{
     width: calc((100% - 60px)/3);
+    position: relative;
+}
+.furnishing-section .contents-outter .contents-box .furnishing-txtbox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    font-size: 1.875rem;
+    font-weight: bold;
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, .4);
+}
+.furnishing-section .contents-outter .contents-box .furnishing-txtbox p{
+    padding-bottom: 10px;
+    padding-right: 20px;
+    border-bottom: 3px solid #fff;
 }
 .furnishing-section .contents-outter .contents-box a{
     display: block;
@@ -243,4 +429,42 @@
 .footer{
     background-color: #B1B2A5;
     padding: 60px 0;
+}
+.footer .footer-top{
+    padding-bottom: 30px;
+    border-bottom: 2px solid #1D1D1B;
+}
+.footer .footer-top .sns-outter{
+    display: flex;
+}
+.footer .footer-top .sns-outter .sns-box{
+    width: 40px;
+    height: 40px;
+}
+.footer .footer-top .sns-outter .sns-box a{
+    display: block;
+}
+.footer .footer-top .sns-outter .sns-box + .sns-box{
+    margin-left: 20px;
+}
+.footer .footer-bottom{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .footer-bottom-left .footer-copyright{
+    margin-bottom: 20px;
+    font-size: 0.875rem;
+}
+.footer .footer-bottom-left ul li{
+    font-size: 0.875rem;;
+}
+.footer .footer-bottom-right{
+    display: flex;
+}
+.footer .footer-bottom-right a{
+    display: block;
+}
+.footer .footer-bottom-right a + a{
+    margin-left: 20px;
 }

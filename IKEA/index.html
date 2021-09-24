@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/setting/default.css">
+    <script src="javascript/index.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -19,7 +20,13 @@
                     <div class="menu-btn"></div>
                     <div class="menu-btn"></div>
                     <div class="menu-btn"></div>
-                    <div class="menu-btn hamBtn"></div>
+                    <div class="menu-btn ham-btn">
+                        <div class="menu-trigger">
+                            <span class="line-1"></span>
+                            <span class="line-2"></span>
+                            <span class="line-3"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -41,27 +48,43 @@
                     <p class="section-sub align">당신의 완벽한 공간을 위한 이케아의 제안</p>
                 </div>
                 <div class="contents-outter">
-                    <div class="contents-long">
+                    <div class="contents-long moveup">
                         <a href="https://www.ikea.com/kr/ko/rooms/bedroom/">
                             <img src="img/showroom1.jpg" alt="content-img">
                         </a>
+                        <div class="show-room-txtbox bedroom">
+                            <p class="show-room-sub">상쾌한 아침은 편안한 침실로부터</p>
+                            <p class="show-room-title">BedRoom Gallery</p>
+                        </div>
                     </div>
                     <div class="double-wrap">
-                        <div class="contents-double">
+                        <div class="contents-double moveup">
                             <a href="https://www.ikea.com/kr/ko/rooms/living-room/">
                                 <img src="img/showroom2.jpg" alt="content-img">
                             </a>
+                            <div class="show-room-txtbox livingroom">
+                                <p class="show-room-sub">좋아하는 사람들과<br/>그 순간을 공유하고 싶다면</p>
+                                <p class="show-room-title">LivingRoom Gallery</p>
+                            </div>
                         </div>
                         <div class="contents-double">
-                            <div class="contents-single">
+                            <div class="contents-single moveup">
                                 <a href="https://www.ikea.com/kr/ko/rooms/dining/">
                                     <img src="img/showroom3.png" alt="content-img">
                                 </a>
+                                <div class="show-room-txtbox single">
+                                    <p class="show-room-title">Dining Room<br/>Gallery</p>
+                                    <p class="show-room-sub">테이블에서의 즐거운 시간</p>
+                                </div>
                             </div>
-                            <div class="contents-single">
+                            <div class="contents-single moveup">
                                 <a href="https://www.ikea.com/kr/ko/rooms/">
                                     <img src="img/showroom4.png" alt="content-img">
                                 </a>
+                                <div class="show-room-txtbox single">
+                                    <p class="show-room-title">View More<br/>Gallery</p>
+                                    <p class="show-room-sub">더 다양한 쇼룸보기</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,17 +103,33 @@
                         </div>
                         <div class="content-material small">
                             <img src="img/material11.png" alt="content-img">
+                            <div class="material-txtbox">
+                                <p class="material-title">목화</p>
+                                <p class="material-sub">지속가능한<br/>면을 위한 약속</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="contents-box">
+                    <div class="contents-box content-material">
                         <img src="img/material2.png" alt="content-img" style="height: 100%;">
+                        <div class="material-txtbox">
+                            <p class="material-title">목재</p>
+                            <p class="material-sub">책임감 있는<br/>산림관리를 위한 노력</p>
+                        </div>
                     </div>
                     <div class="contents-box">
                         <div class="content-material single">
                             <img src="img/material3.png" alt="content-img">
+                            <div class="material-txtbox">
+                                <p class="material-title">울</p>
+                                <p class="material-sub">천연 소재에 대한 믿음</p>
+                            </div>
                         </div>
                         <div class="content-material single">
                             <img src="img/material4.png" alt="content-img">
+                            <div class="material-txtbox">
+                                <p class="material-title">플라스틱</p>
+                                <p class="material-sub">재활용 및 재생 가능한<br/>플라스틱을 향한 변화</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,14 +149,14 @@
                        <div class="info-txtbox right">
                            <p class="info-txt-title">2021 카탈로그</p>
                            <p class="info-txt-sub">매일매일 함께하는 홈퍼니싱 핸드북</p>
-                           <button class="info more-btn">자세히 보기</button>
+                           <button class="info more-btn" onclick="location.href='https://www.ikea.com/kr/ko/customer-service/2022-pubea1d9f70'">자세히 보기</button>
                        </div>
                    </div>
                    <div class="contents-info-outter">
                         <div class="info-txtbox">
                             <p class="info-txt-title">IKEA FOOD</p>
                             <p class="info-txt-sub">쇼핑과 함께 맛있는 음식을 즐기세요</p>
-                            <button class="info more-btn">자세히 보기</button>
+                            <button class="info more-btn"  onclick="location.href='https://www.ikea.com/kr/ko/stores/restaurant/'">자세히 보기</button>
                         </div>
                         <div class="info-imgbox">
                            <img src="img/info2.jpg" alt="content-img">
@@ -130,7 +169,7 @@
                         <div class="info-txtbox right">
                             <p class="info-txt-title">라이프 앳 홈</p>
                             <p class="info-txt-sub">집과 함께하는 새로운 출발</p>
-                            <button class="info more-btn">자세히 보기</button>
+                            <button class="info more-btn" onclick="location.href='https://www.ikea.com/kr/ko/this-is-ikea/design/-pub3f4ad0e1'">자세히 보기</button>
                         </div>
                     </div>
                 </div>
@@ -143,13 +182,15 @@
                     <p class="section-sub align">함께 만드는 지속가능한 생활</p>
                 </div>
                 <div class="contents-outter">
-                    <div class="lab-videobox"></div>
+                    <div class="lab-videobox">
+                        <iframe src="http://sustainability.ikea.kr/ko/img/teaser/pc_play_60sec.mp4"></iframe>
+                    </div>
                     <div class="lab-txtbox">
                         <div class="section-txt-box">
                             <p class="lab-title">IKEA LAB</p>
                             <p class="lab-title">11월 5일 성수 오픈</p>
                             <p class="lab-sub">IKEA가 추구하는 지속가능성의 가치와 철학을 오감으로 느낄 수 있는 체험형 공간인 IKEA Lab이 곧 다가옵니다!</p>
-                            <button class="lab more-btn">자세히 보기</button>
+                            <button class="lab more-btn" onclick="location.href='https://sustainability.ikea.kr/ko/?itm_campaign=sustainability&itm_element=main_sb&itm_content=teasing'">자세히 보기</button>
                         </div>
                     </div>
                 </div>
@@ -163,54 +204,124 @@
                 </div>
                 <div class="contents-outter">
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/tags/-pubd14c90bb">
                             <img src="img/furnishing1.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>Bedroom</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/tags/-pubd14c90bd">
                             <img src="img/furnishing2.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>Livingroom</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/tags/-pubd14c90bc">
                             <img src="img/furnishing3.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>Kitchen</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/tags/-pubd14c90c1">
                             <img src="img/furnishing4.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>Home office</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/tags/-pubd14c90c2">
                             <img src="img/furnishing5.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>Outdoor</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/tags/-pubd14c90bf">
                             <img src="img/furnishing6.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>Bathroom</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/tags/-pubd14c90be">
                             <img src="img/furnishing7.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>Dinning</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/tags/-pubd14c90c0">
                             <img src="img/furnishing8.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>Baby & Childrenroom</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contents-box">
-                        <a href="#">
+                        <a href="https://www.ikea.com/kr/ko/ideas/">
                             <img src="img/furnishing9.jpg" alt="content-img">
+                            <div class="furnishing-txtbox">
+                                <p>More ideas</p>
+                            </div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="align-wrap">
+                <div class="footer-top">
+                    <div class="sns-outter">
+                        <div class="sns-box">
+                            <a href="https://www.facebook.com/IKEA.kr/">
+                                <img src="img/facebook.png" alt="sns-icon">
+                            </a>
+                            </div>
+                        <div class="sns-box">
+                            <a href="https://www.instagram.com/ikeakr/">
+                                <img src="img/instagram.png" alt="sns-icon">
+                            </a>
+                        </div>
+                        <div class="sns-box">
+                            <a href="https://www.youtube.com/channel/UCvt32qJUh606U-W_hr-EF7A">
+                                <img src="img/youtube.png" alt="sns-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-left">
+                        <p class="footer-copyright">© Inter IKEA Systems B.V 1999-2021</p>
+                        <ul>
+                            <li>IKEA 코리아</li>
+                            <li>주소 : (우) 14352 경기도 광명시 일직로 17 IKEA광명점</li>
+                            <li>사업자 등록번호 : 106-86-82871 사업자정보확인</li>
+                            <li>대표자 : 프레드릭 요한손</li>
+                            <li>통신판매업 신고 : 2018-경기광명-0209</li>
+                            <li>TEL : 1670-4532</li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <a href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/" class="shortcut-btn">개인정보처리방침</a>
+                        <a href="https://www.ikea.com/kr/ko/customer-service/terms-conditions/" class="shortcut-btn">웹사이트 이용약관</a>
+                        <a href="https://www.ikea.com/kr/ko/customer-service/responsible-disclosure/" class="shortcut-btn">Responsible disclosure</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="top-btn">
+        <div class="arrow-box"></div>
     </div>
 </body>
 </html>
