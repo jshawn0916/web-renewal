@@ -9,12 +9,13 @@ document.querySelector('.ham-btn').addEventListener('click', function(){
 //top버튼
 let topBtn = document.querySelector('.top-btn');
 window.addEventListener('scroll', function(){
-    console.log(window.scrollTop)
-    // if(this.screenY > 200){
-    //     console.log(1111)
-    //     // topBtn.classList.add('on');
-    // }else{
-    //     console.log(22222)
-    //     // topBtn.classList.remove('on');
-    // }
-})
+    let Y = document.documentElement.scrollTop;
+    if(Y > 90){
+        topBtn.classList.add('on');
+    }else{
+        topBtn.classList.remove('on');
+    }
+});
+topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior :'smooth'})
+});
