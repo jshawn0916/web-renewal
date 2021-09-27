@@ -87,11 +87,14 @@
 /* side-menu */
 .side-menu{
     position: absolute;
-    top: 60px;
+    z-index: 9;
+    top: 0;
     right: 0;
-    width: 40%;
+    width: 30%;
+    height: 100vh;
     background-color: #fff;
-    padding: 40px 50px;
+    padding: 60px;
+    box-shadow: 0 6px 7px rgba(0, 0, 0, .5);
 }
 .side-menu .side-menu-up{
     margin-bottom: 40px;
@@ -103,7 +106,14 @@
     display: block;
     font-size: 1.375rem;
 }
-
+.sub-menu-btn.ham-btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: steelblue;
+}
 /* header-menu-trigger */
 .menu-trigger,
 .menu-trigger span {
