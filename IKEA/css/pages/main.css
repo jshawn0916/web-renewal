@@ -1,4 +1,7 @@
 /*common */
+body{
+    overflow-x: hidden;
+}
 .align-wrap{
     width: 1280px;
     margin: 0 auto;
@@ -89,12 +92,13 @@
     position: absolute;
     z-index: 9;
     top: 0;
-    right: 0;
+    right: -35%;
     width: 30%;
     height: 100vh;
     background-color: #fff;
     padding: 60px;
     box-shadow: 0 6px 7px rgba(0, 0, 0, .5);
+    transition: all .5s ease-in;
 }
 .side-menu .side-menu-up{
     margin-bottom: 40px;
@@ -106,13 +110,15 @@
     display: block;
     font-size: 1.375rem;
 }
+.side-menu.toggle-active{
+    right: 0;
+}
 .sub-menu-btn.ham-btn{
     width: 30px;
     height: 30px;
     position: absolute;
     top: 30px;
     right: 30px;
-    background-color: steelblue;
 }
 /* header-menu-trigger */
 .menu-trigger,
@@ -168,16 +174,16 @@
     display: flex;
 }
 .show-room-section .contents-outter .contents-long{
-    width: 470px;
-    height: 800px;
-    overflow: hidden;
+    width: 36%;
+    background:url('../../img/showroom1.jpg') 0 0 no-repeat;
+    background-size: cover;
 }
 .show-room-section .contents-outter .contents-long a{
     display: block;
 }
 .show-room-section .contents-outter .double-wrap{
     margin-left: 30px;
-    width: calc(100% - 30px);
+    width: calc(64% - 30px);
     flex:1;
 }
 .show-room-section .contents-outter .contents-double a{
@@ -258,7 +264,7 @@
 }
 .material-section .contents-outter{
     display: flex;
-    /* height: 786px; */
+    width: 100%;
 }
 .material-section .contents-outter .contents-box{
     width: calc((100% - 60px)/3);
@@ -291,8 +297,14 @@
 .material-section .contents-box .content-material.small{
     margin-top: 30px;
 }
+.material-section .contents-box.content-material.long{
+    background: url(../../img/material2.png) 0 0 no-repeat;
+    background-size: cover;
+}
 .material-section .contents-box .content-material.single{
     height: calc((100% - 30px)/2);
+}.material-section .contents-box .content-material.single > img{
+    height: 100%;
 }
 .material-section .contents-box .content-material.single:last-child{
     margin-top: 30px;
@@ -341,7 +353,7 @@
 }
 .information-section .contents-info-outter .info-txtbox{
     width: 30%;
-    padding: 90px 0;
+    align-self: center;
 }
 .information-section .info-txtbox .info-txt-title{
     font-size: 2rem;
@@ -498,4 +510,63 @@
 }
 .footer .footer-bottom-right a + a{
     margin-left: 20px;
+}
+
+@media (max-width:1279px){
+    html, body{
+        font-size: 14px;
+    }
+    .header .header-align{
+        width: auto;
+        padding: 0 30px;
+    }
+    .align-wrap{
+        width: auto;
+        padding : 0 30px;
+    }
+    .material-section .contents-box .section-txt-outter .section-txt-box{
+        padding: 30px 20px;
+    }
+    .material-section .contents-box .section-txt-outter .section-txt-box .section-title{
+        padding-bottom: 20px;
+    }
+    .material-section .contents-box .section-txt-outter .section-txt-box .section-sub{
+        padding-top: 20px;
+    }
+    .material-section .contents-box .section-txt-outter{
+        height: auto;
+    }
+    .ikea-lab-section .contents-outter{
+        height: auto;
+    }
+    .ikea-lab-section .lab-txtbox .lab-title + .lab-title{
+        margin: 8px 0;
+    }
+    .ikea-lab-section .lab-txtbox .lab-sub{
+        margin-bottom: 16px;
+    }
+    .side-menu{
+        width: 35%;
+        right: -36%;
+    }
+}
+@media (max-width:1023px){
+    html,body{
+        font-size: 13px;
+    }
+    .material-section .content-material .material-txtbox{
+        padding: 30px;
+    }
+    .information-section .info-txtbox .info.more-btn{
+        height: 46px;
+    }
+    .ikea-lab-section .lab-txtbox .section-txt-box{
+        padding:30px 20px;
+    }
+    .ikea-lab-section .lab-txtbox .lab.more-btn{
+        height: 46px;
+    }
+}
+@media (max-width:767px){
+    
 }

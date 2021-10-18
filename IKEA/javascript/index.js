@@ -1,10 +1,14 @@
 
 //header 버튼 토글
 const menuToggle = document.querySelector('.menu-trigger');
+const sideToggle = document.querySelector('.side-menu');
 
 document.querySelector('.ham-btn').addEventListener('click', function(){
-    menuToggle.classList.toggle('toggle-active');
+    sideToggle.classList.toggle('toggle-active');
 });
+document.querySelector('.sub-menu-btn').addEventListener('click', function(){
+    sideToggle.classList.toggle('toggle-active');
+})
 
 //top버튼
 let topBtn = document.querySelector('.top-btn');
