@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/setting/default.css">
     <script src="javascript/index.js" defer></script>
     <title>Document</title>
@@ -55,16 +56,19 @@
             </div>
         </div>
         <div class="align-wrap">
-            <div class="banner-box">
-                <div class="banner-box">
-                    <img src="img/banner1.png" alt="banner-img">
+            <div class="swiper mySwiper">
+                <div class="banner-box swiper-wrapper">
+                    <div class="banner-box swiper-slide">
+                        <img src="img/banner1.png" alt="banner-img">
+                    </div>
+                    <div class="banner-box swiper-slide">
+                        <img src="img/banner2.png" alt="banner-img">
+                    </div>
+                    <div class="banner-box swiper-slide">
+                        <img src="img/banner3.png" alt="banner-img">
+                    </div>
                 </div>
-                <div class="banner-box none">
-                    <img src="img/banner2.png" alt="banner-img">
-                </div>
-                <div class="banner-box none">
-                    <img src="img/banner3.png" alt="banner-img">
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
             <div class="show-room-section section">
                 <div class="section-txt-box">
@@ -74,7 +78,6 @@
                 <div class="contents-outter">
                     <div class="contents-long moveup">
                         <a href="https://www.ikea.com/kr/ko/rooms/bedroom/">
-                            <!-- <img src="img/showroom1.jpg" alt="content-img"> -->
                         </a>
                         <div class="show-room-txtbox bedroom">
                             <p class="show-room-sub">상쾌한 아침은 편안한 침실로부터</p>
@@ -133,9 +136,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contents-box content-material long">
-                        <!-- <img src="img/material2.png" alt="content-img" style="height: 100%;"> -->
-                        <div class="material-txtbox">
+                    <div class="contents-box content-material long"> <div class="material-txtbox">
                             <p class="material-title">목재</p>
                             <p class="material-sub">책임감 있는<br/>산림관리를 위한 노력</p>
                         </div>
@@ -347,5 +348,20 @@
     <div class="top-btn">
         <div class="arrow-box"></div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        });
+      </script>
 </body>
 </html>

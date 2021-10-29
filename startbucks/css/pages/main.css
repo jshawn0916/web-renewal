@@ -49,7 +49,7 @@
     font-weight: bold;
     cursor: pointer;
 }
-.menu-left-box .menu-left li.on{
+.menu-left-box .menu-left li a.on{
     color: #007042;
 }
 .menu-left-box .menu-left li + li{

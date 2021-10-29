@@ -1,6 +1,42 @@
 /*common */
+html,body {
+    position: relative;
+    height: 100%;
+}
 body{
     overflow-x: hidden;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 190px;
 }
 .align-wrap{
     width: 1280px;
@@ -518,11 +554,11 @@ body{
     }
     .header .header-align{
         width: auto;
-        padding: 0 30px;
+        padding: 0 20px;
     }
     .align-wrap{
         width: auto;
-        padding : 0 30px;
+        padding : 0 20px;
     }
     .material-section .contents-box .section-txt-outter .section-txt-box{
         padding: 30px 20px;
@@ -554,6 +590,12 @@ body{
     html,body{
         font-size: 13px;
     }
+    .align-wrap{
+        padding: 0 10px;
+    }
+    .header .header-align{
+        padding: 0 10px;
+    }
     .material-section .content-material .material-txtbox{
         padding: 30px;
     }
@@ -566,7 +608,91 @@ body{
     .ikea-lab-section .lab-txtbox .lab.more-btn{
         height: 46px;
     }
+    .information-section .contents-info-outter .info-txtbox{
+        padding-left: 10px;
+    }
+    .information-section .contents-info-outter .info-txtbox.right{
+        padding-right: 10px;
+    }
 }
 @media (max-width:767px){
-    
+    html,body{
+        font-size: 12px;
+    }
+    .show-room-section .show-room-txtbox.livingroom .show-room-title{
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    .show-room-section .show-room-txtbox .show-room-title{
+        font-size: 1.563rem;
+    }
+    .show-room-section .show-room-txtbox .show-room-sub {
+        font-size: 1.125rem;
+    }
+    .show-room-section .show-room-txtbox.bedroom{
+        padding: 40px 30px;
+    }
+    .show-room-section .show-room-txtbox.livingroom{
+        padding: 20px;
+    }
+    .show-room-section .show-room-txtbox.single{
+        padding: 20px;
+    }
+    .material-section{
+        padding: 50px 0;
+    }
+    .material-section .contents-outter .contents-box{
+        width: calc((100% - 36px)/3);
+    }
+    .material-section .contents-outter .contents-box + .contents-box{
+        margin-left: 18px;
+    }
+    .material-section .contents-box .section-txt-outter .section-txt-box{
+        padding: 20px;
+    }
+    .material-section .contents-box .section-txt-outter .section-txt-box .section-title{
+        font-size: 1.5rem;
+    }
+    .material-section .contents-box .section-txt-outter .section-txt-box .section-sub{
+        font-size: 1.25rem;
+    }
+    .ikea-lab-section{
+        padding: 50px 0;
+    }
+    .ikea-lab-section .contents-outter{
+        margin-top: 50px;
+    }
+    .ikea-lab-section .lab-txtbox .section-txt-box{
+        padding: 20px;
+    }
+    .ikea-lab-section .lab-txtbox .lab-title{
+        font-size: 1.5rem;
+    }
+    .ikea-lab-section .lab-txtbox .lab-sub{
+        font-size: 1.25rem;
+    }
+    .ikea-lab-section .lab-txtbox .lab.more-btn{
+        height: 40px;
+        padding: 0 20px;
+    }
+    .show-room-section .section-txt-box, .information-section .section-txt-box, .furnishing-section .section-txt-box{
+        margin: 90px 0;
+    }
+    .furnishing-section .contents-outter .contents-box{
+        width: calc((100% - 40px)/3);
+    }
+    .furnishing-section .contents-outter .contents-box:nth-child(3n+2){
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .furnishing-section .contents-outter .contents-box:nth-child(n+4){
+        margin-top: 20px;
+    }
+    .furnishing-section .contents-outter .contents-box .furnishing-txtbox{
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+    .furnishing-section .contents-outter .contents-box .furnishing-txtbox p{
+        padding-bottom: 10px;
+    }
 }
