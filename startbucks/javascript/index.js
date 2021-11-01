@@ -1,3 +1,4 @@
+
 //menu-btn 클릭시 스크롤 이동 효과
 
 document.querySelectorAll('a[href^="#"]').forEach(function(elem){
@@ -40,7 +41,7 @@ window.addEventListener("wheel", function(e){
         }
         page--;
     }
-    for(let i = 0; i< document.getElementsByClassName("menu-btn").length; i++){
+    for(let i = 0; i < document.getElementsByClassName("menu-btn").length; i++){
         document.getElementsByClassName("menu-btn")[i].classList.remove("on") 
     }
     document.getElementsByClassName("menu-btn")[page].classList.add("on");
@@ -53,3 +54,7 @@ window.addEventListener("wheel", function(e){
 
     // htmlBody.animate({scrollTop : posTop});
 });
+//새로고침시, 스크롤 맨위로
+window.onload = function(){
+//   document.getElementById('menu1').click();
+}
