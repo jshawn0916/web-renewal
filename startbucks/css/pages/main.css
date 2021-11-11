@@ -1,4 +1,8 @@
 /* common */
+body{
+    overflow: hidden;
+    /* height: 100%; */
+}
 .total-wrap{
     display: flex;
 }
@@ -125,10 +129,51 @@
 }
 .content-box .middle-box{
     width: 560px;
+    position: relative;
 }
-.content-box .middle-box img{
+.content-box .middle-box > img{
     height: 100vh;
 }
+.content-box .middle-box .tumblr-box{
+    width: 410px;
+    height: 600px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* swiper css */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/*  */
 .content-box .right-box{
     width: calc(100% - 560px);
 }
