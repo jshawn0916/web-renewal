@@ -113,9 +113,8 @@ body{
     display: flex;
 }
 .header-align .right-menubox .menu-btn{
-    width: 30px;
-    height: 30px;
-    background-color: skyblue;
+    width: 36px;
+    height: 36px;
 }
 .header-align .right-menubox .menu-btn + .menu-btn{
     margin-left: 20px;
@@ -180,14 +179,14 @@ body{
     transition: transform .5s ease;
 }
 .menu-trigger .line-1 {
-    top: 0;
+    top: 3px;
 }
 .menu-trigger .line-2 {
-    top: 13px;
+    top: 16px;
 }
 
 .menu-trigger .line-3 {
-    bottom: 0;
+    bottom: -3px;
 }
 .toggle-active .line-1 {
     transform: rotate(-45deg);

@@ -257,7 +257,7 @@
     display: flex;
 }
 .fourbtn-align .four-btn{
-    width: 25%;
+    width: 33.333%;
     padding: 30px;
     text-align: center;
 }
@@ -267,7 +267,6 @@
 .fourbtn-align .four-btn .icon-box{
     width: 32px;
     height: 32px;
-    background-color: orange;
     margin: 20px auto;
 }
 .fourbtn-align .four-btn .sns-box{
@@ -390,20 +389,23 @@
         margin-top: 15px;
     }
     .fourbtn-align{
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        display: block;
     }
     .fourbtn-align .four-btn{
-        width: 50%;
+        width: auto;
     }
     .fourbtn-align .four-btn + .four-btn{
         border-left: none;
     }
     .fourbtn-align .four-btn:nth-child(2n){
-        border-left: 1px solid #bbb;
-    }
-    .fourbtn-align .four-btn:nth-child(n+3){
         border-top: 1px solid #bbb;
+        border-bottom: 1px solid #bbb;
+
     }
+    /* .fourbtn-align .four-btn:nth-child(n+3){
+        border-top: 1px solid #bbb;
+    } */
     .header .header-align{
         justify-content: center;
     }
