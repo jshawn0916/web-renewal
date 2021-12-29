@@ -1,7 +1,8 @@
 /* common */
 body{
-    overflow: hidden;
-    /* height: 100%; */
+    min-width: 1024px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .total-wrap{
     display: flex;
@@ -30,6 +31,40 @@ body{
 .jeju-txt{
     color: #134721;
 }
+/* hambuger */
+.ham {
+    position: fixed;
+    top: 14px;
+    left: 16px;
+    cursor:pointer;
+    display: none;
+    z-index: 21;
+    transition: left .5s ease;
+}
+.ham span {
+    display: block;
+    background: #000;
+    width: 28px;
+    height: 4px;
+    border-radius: 3px;
+    transition: margin 0.25s 0.25s, transform 0.25s ;
+}
+.ham .bar1 {margin-bottom: 5px;}
+.ham .bar3 {margin-top: 5px;}
+.ham.active{left: 226px;}
+.ham.active span {transition: margin 0.25s, transform 0.25s 0.25s;} 
+.ham.active .bar1 {
+    margin-top: 8px;
+    margin-bottom: -4px;
+    transform: rotate(45deg);
+}
+.ham.active .bar2 {
+    transform: rotate(45deg);
+}
+.ham.active .bar3 {
+    margin-top: -4px;
+    transform: rotate(135deg);
+}
 /* header */
 .header{
     width: 320px;
@@ -39,8 +74,9 @@ body{
     z-index: 1;
 }
 .header .logo{
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
 }
 .header .menu-left-box{
     position: absolute;
@@ -71,14 +107,11 @@ body{
 }
 /* menu */
 .menu-right{
-    width: calc(100% - 880px);
-    height: 140px;
-    background-color: #fff;
     display: flex;
     justify-content: end;
     align-items: center;
     right: 0;
-    padding: 50px 70px;
+    padding: 30px 70px;
     z-index: 1;
 }
 .menu-right .sub-menu{
@@ -110,9 +143,8 @@ body{
     font-family: 'Candal', sans-serif;
     color: #eee;
     opacity: .6;
-    padding-top: 20px;
-    top: 50%;
-    right: 10%;
+    top: 48%;
+    left: 940px;
     transform: translateY(-50%);
     z-index: -1;
 }
@@ -176,11 +208,13 @@ body{
 /*  */
 .content-box .right-box{
     width: calc(100% - 560px);
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 .content-box .right-box .content-txt{
     font-family: 'Nanum';
     padding: 0 60px;
-    margin-top: 45%;
 }
 .content-box .right-box .content-txt .content-title{
     font-size: 1.375rem;
@@ -195,23 +229,46 @@ body{
     font-size: 1.125rem;
     text-align: right;
     padding: 0 70px;
-    margin-top: 330px;
     font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    right: 20px;
+    bottom:20px;
 }
-
-/* mobile */
-/* @media (max-width:768px){
-    .total-wrap{
-        display: none;
+@media screen and (max-width:1500px){
+    .menu-right .sub-menu + .sub-menu{
+        margin-left: 20px;
     }
-    .mobile-wrap{
-        display: block;    
+}
+@media screen and (max-width:1400px){
+    .bg-txt{
+        font-size: 4rem;
+        left: 650px;
     }
-    .mobile-wrap .header{
-        width: 260px;
-        height: 100vh;
-        background-color: #fff;
-        padding: 0 30px;
-        z-index: 1;
+    .ham {
+        display: block;
     }
-} */
+    .header{
+        position: fixed;
+        left: -270px;
+        top: 0;
+        width: 270px;
+        z-index: 20;
+        transition: all .5s ease;
+    }
+    .header.active{
+        left: 0;
+    }
+    .city-contentbox{
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+    .content-box .right-box .content-txt{
+        padding: 0 20px;
+    }
+    .menu-right{
+        padding: 10px 20px;
+    }
+    .menu-right .sub-menu{
+        font-size: 1.125rem;
+    }
+}
