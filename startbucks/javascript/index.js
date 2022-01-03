@@ -14,7 +14,12 @@ document.querySelectorAll('a[href^="#"]').forEach(function(elem){
         });
     });
 });
-
+//ham버튼 
+document.querySelector('.ham').addEventListener('click', function(){
+    console.log(11111)
+    document.querySelector('.ham').classList.toggle('active');
+    document.querySelector('.header').classList.toggle('active');
+})
 //새로고침시, 스크롤 맨위로
 let scroll_stay = false;
 let _page = document.querySelectorAll('.content-box');
